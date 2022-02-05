@@ -10,7 +10,7 @@
   
     <link href="css/slides.min.css?41331" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+   
 	<!-- Compressed Scripts -->
 	<script src="js/slides.min.js?41331" type="text/javascript"></script>
 
@@ -26,11 +26,17 @@
             background-color: #EDEDED;
             font-family: 'Roboto';
         }
-        .flex-container {
-            column-gap: 5%;
+        /* .flex-container { */
+          .flex-container {
+            column-gap: 24%;
             display: flex;
             flex-direction: row;
+            margin-bottom: -61px;
         }
+        .heading-about{
+          align-self: center;
+        }
+
         .text-item .p-text {
             align-self: center;
             font-size: larger;
@@ -40,6 +46,7 @@
         }
         .logo-img{
             border-radius: 50%;
+            height: 115px;;
         }
         li{
             list-style: disc;
@@ -53,9 +60,10 @@
             padding-left: 1%;
         }
         #footer {
-            background-color: #DA0037;
+            background-color: #d44f71;
             color: #FFF;
             padding: 20px 0px 5px 0px;
+            font-size: larger;
         }
         nav.panel.top {
             background-color: #EDEDED;
@@ -64,8 +72,57 @@
           font-weight: inherit;
         }
         h2{
-          color: #DA0037;
+          color: #d44f71;
         }
+        .center li a:hover{
+          color: #d44f71;
+          background-color: #dddddd;
+        }
+        .center ul li{
+          position: relative;
+          list-style: none;
+          display: inline-block;
+          line-height: 30px;
+        }
+        .center ul li a{
+          display:block;
+          text-decoration: none;
+          line-height: 40px;
+          padding-top: 0%;
+          
+        }
+        .center ul ul{
+          position: absolute;
+          top:60px;
+          display:none;
+        }
+        .center ul ul{
+          position: absolute;
+          top:40px;
+          display:none;
+        }
+        .center ul li:hover>ul{
+          display: block;
+        }
+        .center ul ul li{
+           width:200px; 
+           float:none;
+           display:list-item; 
+           position:relative;
+            /* padding: 2%; */
+        } 
+        .Subnav{
+          background-color: #dddddd;
+          margin-left: 74%;
+        }
+        .objective li {
+          list-style: disc;
+          font-size: 22px;
+          /* line-height: 1.6363636364; */
+          margin-bottom: 12px;
+          font-weight: 300;
+          margin-left: 1%;
+        }      
         
     </style>   
   </head>
@@ -76,12 +133,56 @@
         <!-- <div class="left"><a href="#" title="Slides Framework"><svg style="width:82px;height:24px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg></a></div> -->
         <div class="center">
           <ul class="menu uppercase">
-            <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html">Home</a>            
+            </li>
             <li><a href="./About.html">About Us</a></li>
-            <li><a href="/About.html">Care</a></li>
-            <li><a href="#">Resources</a></li>
-            <li><a href="#">Latest News</a></li>
-            <li><a href="#">Meeting</a></li>
+            <li class="supernav"><a href="/About.html">Care</a>
+              <ul class="Subnav">
+                <li><a href="#">Physiotherapy</a></li> <br>
+                <li><a href="#">Hydropathy</a></li> <br>
+                <li><a href="#">Diet</a></li> <br>
+                <li><a href="#">Counselling</a></li> <br>
+              </ul>
+            </li>
+          
+            <li>
+              <a href="#">Resources</a>
+              <ul class = "Subnav">
+                <li><a href="#">Disabilty Certificate</a> </li> <br>
+                <li><a href="#">Supportive Devices And <br> Equipment</a> </li> <br>
+                <li><a href="#">Useful Link</a></li> <br>
+                <li><a href="#">Video</a></li> <br>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Kids Corner</a>
+              <ul class = "Subnav">
+                <li><a href="#">Achievements</a></li> <br>
+                <li><a href="#">Skills</a></li> <br>
+                <li><a href="#">Education</a></li> <br>
+                <li><a href="#">Mental Health</a>
+                  <ul class="Subnav" >
+                    <li><a href="#">Acceptance</a></li> <br>
+                    <li><a href="#">Facing Society</a></li> <br>
+                    <li><a href="#">Build Confidence</a></li> <br>
+                  </ul>
+                
+                </li> <br>
+              </ul>
+            
+            </li>
+            <li><a href="#">Moms Corner</a>
+              <ul class="Subnav">
+                <li><a href="./ImprovingqualityofLife.html">Improving Quality Of Life</a></li> <br>
+                <li><a href="./Informingyourson.html">Informing Your Son</a></li> <br>
+                <li><a href="#">Acceptance</a></li> <br>
+                <li><a href="#">Depression</a></li> <br>
+                <li><a href="#">Carrier</a></li> <br>
+                <li><a href="#">Sharing Experience</a></li> <br>
+                <li><a href="#">Heath Tips</a></li> <br>
+              </ul>
+            
+            </li>
             <li><a href="#">Contact Us</a></li>
           </ul>
         </div>
@@ -95,23 +196,24 @@
       </div>
     </nav>
       <div class="heading-About-us">
-          <h1 style = "color:#DA0037;border:30%;">About Us</h1>
+        <div class="flex-container"> 
+          <img class= "logo-img" src="./logo.jpeg" >
+          <h1 class="heading-about" style = "color:#d44f71;border:30%;">About Us</h1>
+          <!-- <div class="text-item"><p class="p-text">The relationship between mother and child is beyond words If the bond between them is firm, then  the result will come out to be healthy. If the child is specially-abled, then the mother's role in his life becomes crucial.The relationship between mother and child is beyond words If the bond between them is firm, then  the result will come out to be healthy. If the child is specially-abled, then the mother's role in his life becomes crucial.</div> -->
+            
+        </div>
+          
       </div>
       <div>
         <p>
           <!-- <h4 style="color: blue;">About Us</h4> -->
           <hr>
         </p><br>
-        <div class="flex-container">
-            <div class="flex-item">
-                <div class="img-box">
-                    <img class= "logo-img" src="./logo.jpeg">
-                </div>
-                
-            </div>
+        <!-- <div class="flex-container"> 
+                <img class= "logo-img" src="./logo.jpeg" >
             <div class="text-item"><p class="p-text">The relationship between mother and child is beyond words If the bond between them is firm, then  the result will come out to be healthy. If the child is specially-abled, then the mother's role in his life becomes crucial.The relationship between mother and child is beyond words If the bond between them is firm, then  the result will come out to be healthy. If the child is specially-abled, then the mother's role in his life becomes crucial.</div>
             </p>
-            </div>
+            </div> -->
           <p>
             We think from the perspective of a mother of specially-abled. We should come together and help each other to bring up a child. 
             There are many questions and confusions in the mother's mind while bringing up a specially-abled child. We took the initiative to form this group for mothers of DMD. We are here to help you and guide you through.
@@ -120,8 +222,8 @@
         <p>
           <h2 style="text-align: center">Our Objectives</h2>
           <hr>
-          <p style="border:30%;">
-            <ul>
+          <p>
+            <ul class="objective">
               <li>To spread awareness about DMD and ways to take care of DMD children.</li>
               
               <li>To maintain child's mental and physical health and control side effects of DMD, and give them a better quality of life.</li> 
@@ -133,14 +235,20 @@
               <li>Spread awareness of educating the child and using a wheelchair, which would benefit their child for socializing.</li>
               
               <li>To find out talent in the children and praise them.</li>
+              <li>Have online monthly meetings with mothers and listen to their issues. </li>
             </ul>
           </p>
         </p>
       </div>
       <div id="footer">
-        <p style="text-align: center;">
-            Made in India with Care and Support to Give DMD Children Better quality of life
-          </p>
+        <!-- <p style="text-align: center;"> -->
+          <marquee>"Think Positive Be Positive Live Positive To Provide Best Care To Your Kid".</marquee>
+    <!-- <marquee direction="right" 
+        behavior="alternate" 
+        style="border:BLACK 2px SOLID">
+    </marquee> -->
+            
+         
       </div>
   </body>
 </html>
